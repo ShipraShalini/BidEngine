@@ -3,7 +3,8 @@ from src.api.ES.helpers.itemhelper import get_item
 from src.api.ES.helpers.bidhelper import highestbid
 from src.common.helpers.getrequest import read_request, values
 from src.api.ES.helpers.commonhelper import is_sold
-from items.ES.constants import messages
+from src.common.config.constants.messages import messages
+from src.common.config.constants.constants import NUMBER_OF_TOP_BIDS
 
 
 
@@ -20,7 +21,6 @@ def view_items(request):
     if is_sold(item):
         return (message)
     else:
-        NUMBER_OF_TOP_BIDS= messages['NUMBER_OF_TOP_BIDS']
         top_bids= highestbid(N=NUMBER_OF_TOP_BIDS, item=item)
         message = message + "\nThe top {0} bids:\n{1}".format(NUMBER_OF_TOP_BIDS, top_bids)
     return (message)

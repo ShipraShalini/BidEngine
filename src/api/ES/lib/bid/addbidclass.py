@@ -1,6 +1,6 @@
 from src.common.helpers.getrequest import read_request
 from src.api.ES.helpers.commonhelper import notify, is_sold
-from items.ES.constants import messages
+from src.common.config.constants.messages import messages
 from django.contrib.auth.decorators import login_required
 from src.api.ES.helpers.bidhelper import *
 

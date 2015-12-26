@@ -1,7 +1,7 @@
-from view_helper import notify,read_request_item, is_sold
-from items.ES.constants import messages
+from src.common.helpers.getrequest import read_request
+from src.api.ES.helpers.bidhelper import get_bid
 from django.contrib.auth.decorators import login_required
-from elastic import get_bid , create_bid, modify_bid
+
 
 
 '''
@@ -10,7 +10,7 @@ no input, users should be logged in
 #view bids of an users
 @login_required(login_url='http://localhost:8000/login_message/')
 def view_bids(request):
-    bidder, item_name = read_request_item(request)
+    bidder, item_name = read_request(request)
     bid_dict= {}
     bid_list = get_bid(bidder=bidder)
     for bid in bid_list:

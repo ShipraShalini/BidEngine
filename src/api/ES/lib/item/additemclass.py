@@ -3,9 +3,10 @@ from src.common.libraries.scheduler import s
 from src.api.ES.helpers.itemhelper import get_item
 from src.api.ES.lib.item.sellitemclass import sell_items
 from src.common.helpers.getrequest import read_request
+from src.common.config.constants.constants import NO_OF_HOURS
 
 
-NO_OF_HOURS= 1
+
 
 @login_required(login_url='http://localhost:8000/login_message/')
 def add_items(request):

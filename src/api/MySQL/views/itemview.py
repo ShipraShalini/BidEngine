@@ -1,4 +1,7 @@
-from items_views import add_items, view_items, del_items, update_items
+from src.api.MySQL.lib.item.additemclass import add_items
+from src.api.MySQL.lib.item.deleteitemclass import del_items
+from src.api.MySQL.lib.item.viewitemclass import view_items
+from src.api.MySQL.lib.item.modifyitemclass import modify_items
 from django.http import HttpResponse
 
 def item(request):
@@ -13,6 +16,6 @@ def item(request):
         message = del_items(request)
 
     if request.method == "PUT":
-        message = update_items(request)
+        message = modify_items(request)
 
     return HttpResponse(message)

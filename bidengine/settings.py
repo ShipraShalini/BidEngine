@@ -71,7 +71,7 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'bidengine.urls'
+ROOT_URLCONF = 'bidengine.src.api.ES.urls'
 
 WSGI_APPLICATION = 'bidengine.wsgi.application'
 

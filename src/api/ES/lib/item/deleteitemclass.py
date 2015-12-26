@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from src.common.helpers.getrequest import read_request
-from items.ES.constants import messages
+from src.common.config.constants.messages import messages
 from src.api.ES.helpers.commonhelper import is_owner
 
 
