@@ -24,7 +24,7 @@ response = c.post('/user_add/', {'username': "qffrfrf", 'first_name': "Aaaa", 'l
 # we should expect a 404 from that address
 #responsestatus_code
 '''
-{"username": "qffrfrf", "first_name": "Aaaa", "last_name":"BBbbb", "email": "abc@example.com"}
+{"username": "ShipraS", "first_name": "Shipra", "last_name":"Shalini", "email": "abc@example.com"}
 
 Add bid
 {
